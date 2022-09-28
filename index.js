@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 const generateREADME = require('./src/readme-template');
+const path = require('path');
+const fs = require('fs');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -12,8 +13,7 @@ const promptUser = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log('Please enter a project title!');
-                    return false;
+                    return 'Please enter a project title!'
                 }
             }
         },
@@ -33,7 +33,7 @@ const promptUser = () => {
             message: 'How is your project meant to be used?'
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenses',
             message: 'Which license does your project use?',
             choices: ['Apache', 'GNU', 'MIT', 'ISC']
@@ -52,3 +52,6 @@ const promptUser = () => {
 }
 
 promptUser()
+    .then(READMEdata => {
+        fs.writeFileSync(path.join(__dirname, '/dist/README.md'), generateREADME(READMEdata))
+    })

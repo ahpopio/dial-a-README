@@ -1,34 +1,40 @@
-module.exports = templateData => {
+function createBadge(license) {
+    if(license === 'Apache') {
+        return "[![Apache License, Version 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](https://opensource.org/licenses/Apache-2.0)"
+    }
+}
+
+module.exports = READMEdata => {
     const { projectName, projectDescription, installInstructions, 
-    usageInstructions, licenses, contributors, testInstructions } = templateData;
+    usageInstructions, licenses, contributors, testInstructions } = READMEdata;
 
     return `
-    # ${projectName}
+# ${projectName}
+${createBadge(licenses)}
+## Description
+${projectDescription}
 
-    ## Description
-    ${projectDescription}
+## Table of Contents
 
-    ## Table of Contents
+- [Installation Instructions](#installation)
+- [Usage Instructions](#usage)
+- [Licenses](#licenses)
+- [Credits](#credits)
+- [Testing Instructions](#tests)
 
-    - [Installation Instructions](#installation)
-    - [Usage Instructions](#usage)
-    - [Licenses](#licenses)
-    - [Credits](#credits)
-    - [Testing Instructions](#tests)
+## Installation
+${installInstructions}
 
-    ## Installation
-    ${installInstructions}
+## Usage
+${usageInstructions}
 
-    ## Usage
-    ${usageInstructions}
+## Licenses
+${licenses}
 
-    ## Licenses
-    ${licenses}
+## Credits
+${contributors}
 
-    ## Credits
-    ${contributors}
-
-    ## Tests
-    ${testInstructions}
-    `
+## Tests
+${testInstructions}
+`
 };
