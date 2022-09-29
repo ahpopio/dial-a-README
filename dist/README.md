@@ -1,8 +1,8 @@
 
-# Andrew
-[![Apache License, Version 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](https://opensource.org/licenses/Apache-2.0)
+# Dial-A-README
+[![ISC License](https://img.shields.io/badge/license-ISC-green)](https://opensource.org/licenses/ISC)
 ## Description
-asdf
+This project is meant to help generate professional READMEs for the end user.
 
 ## Table of Contents
 
@@ -13,16 +13,16 @@ asdf
 - [Testing Instructions](#tests)
 
 ## Installation
-asdf
+The user must install Node and run "node index" from the command line.
 
 ## Usage
-asdf
+This project is meant to be used as a tool when working with GitHub.
 
 ## Licenses
-Apache
+ISC
 
 ## Credits
-asdf
+Andrew Popio
 
 ## Tests
-asdf
+N/A
