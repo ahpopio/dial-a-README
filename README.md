@@ -14,5 +14,9 @@ I have included a video and a screenshot demonstrating this project's usage.
 
 ![Screenshot (228)](https://user-images.githubusercontent.com/20990705/192918047-999814ec-866e-48f0-afc9-66b0bf746de0.png)
 
+## Built With
+* JavaScript
+* Node.js
+
 ## Contribution
 Made with ❤️ by Andrew Popio
